@@ -1,0 +1,15 @@
+<ion-view view-title="Listagem">
+	<ion-content>		
+		<div class="list">
+			<a href="/detail/{{ item.id }}" class="item item-icon-left" ng-repeat="item in list">
+				<i class="icon ion-person-stalker"></i>
+				{{ item.name }}
+			</a>
+		</div>
+		<div class="card" ng-if="!list.length || list.length <= 0">
+			<div class="item item-text-wrap">
+				Não foi possível conectar ao servidor. Verifique se ele está rodando!
+			</div>
+		</div>
+	</ion-content>
+</ion-view>
